@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Templates — Client Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared/reset.css" />
+  <style>
+    :root {
+      --dark: #111;
+      --mid: #555;
+      --lt: #aaa;
+      --bg: #f9f9f9;
+      --white: #fff;
+      --ff-head: 'Playfair Display', Georgia, serif;
+      --ff-body: 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .header__eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lt);
+      margin-bottom: 1rem;
+    }
+
+    .header__title {
+      font-family: var(--ff-head);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .header__sub {
+      font-size: 1rem;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Grid */
+    .templates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    /* Card */
+    .card {
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .card__thumb {
+      height: 380px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card__thumb {
+      transform: scale(1.04);
+    }
+
+    .card--elegant .card__thumb {
+      background-image:
+        linear-gradient(to bottom, rgba(26, 26, 26, 0.3) 0%, rgba(26, 26, 26, 0.6) 100%),
+        url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80');
+    }
+
+    .card--modern .card__thumb {
+      background-image:
+        linear-gradient(to bottom, rgba(17, 17, 17, 0.2) 0%, rgba(17, 17, 17, 0.55) 100%),
+        url('https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80');
+    }
+
+    .card--rustic .card__thumb {
+      background-image:
+        linear-gradient(to bottom, rgba(74, 55, 40, 0.3) 0%, rgba(74, 55, 40, 0.65) 100%),
+        url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80');
+    }
+
+    .card__body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      color: #fff;
+    }
+
+    .card__tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card--elegant .card__tag {
+      background: #c9a84c;
+    }
+
+    .card--modern .card__tag {
+      background: #e8a0a0;
+      color: #111;
+    }
+
+    .card--rustic .card__tag {
+      background: #8a9a6e;
+    }
+
+    .card__name {
+      font-family: var(--ff-head);
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin-bottom: 0.35rem;
+    }
+
+    .card__desc {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .card__btn {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 0.55rem 1.25rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .card__btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #fff;
+    }
+
+    /* Features list */
+    .features {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .features__title {
+      font-family: var(--ff-head);
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .features__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--white);
+    }
+
+    .feature__icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature__label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature__desc {
+      font-size: 0.8rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #eee;
+      font-size: 0.8rem;
+      color: var(--lt);
+    }
+
+    /* ── Animations ─────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header stagger on load */
+    .header__eyebrow { animation: fadeUp 0.6s ease both; }
+    .header__title   { animation: fadeUp 0.7s ease 0.12s both; }
+    .header__sub     { animation: fadeUp 0.7s ease 0.24s both; }
+
+    /* Scroll reveal base state */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <p class="header__eyebrow">Client Showcase</p>
+    <h1 class="header__title">Wedding Website Templates</h1>
+    <p class="header__sub">Three distinct styles — choose the one that feels most like you, and we'll make it yours.</p>
+  </header>
+
+  <main class="templates">
+
+    <div class="card card--elegant">
+      <div class="card__thumb"></div>
+      <div class="card__body">
+        <span class="card__tag">Elegant</span>
+        <div class="card__name">Classic &amp; Timeless</div>
+        <p class="card__desc">Gold accents, Playfair typography, ivory tones. Perfect for formal black-tie celebrations.
+        </p>
+        <a href="elegant/index.html" class="card__btn">Preview Template &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card card--modern">
+      <div class="card__thumb"></div>
+      <div class="card__body">
+        <span class="card__tag">Modern</span>
+        <div class="card__name">Clean &amp; Minimal</div>
+        <p class="card__desc">Bold sans-serif layout, blush accents, split-screen hero. Ideal for contemporary couples.
+        </p>
+        <a href="modern/index.html" class="card__btn">Preview Template &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card card--rustic">
+      <div class="card__thumb"></div>
+      <div class="card__body">
+        <span class="card__tag">Rustic</span>
+        <div class="card__name">Bohemian &amp; Warm</div>
+        <p class="card__desc">Earthy sage, terracotta, and cream. Lora serifs and botanical details for outdoor venues.
+        </p>
+        <a href="rustic/index.html" class="card__btn">Preview Template &rarr;</a>
+      </div>
+    </div>
+
+  </main>
+
+  <section class="features">
+    <h2 class="features__title">Every template includes</h2>
+    <div class="features__grid">
+      <div class="feature">
+        <div class="feature__icon">&#9202;</div>
+        <div class="feature__label">Live Countdown</div>
+        <div class="feature__desc">Real-time days, hours, minutes, seconds to the big day</div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#128140;</div>
+        <div class="feature__label">RSVP Form</div>
+        <div class="feature__desc">Built-in guest form with name, party size, and dietary needs</div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#128202;</div>
+        <div class="feature__label">RSVP + Google Sheet</div>
+        <div class="feature__desc">Responses go straight to a Google Sheet</div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#127881;</div>
+        <div class="feature__label">Cash Gift Links</div>
+        <div class="feature__desc">GCash, Maya, and QR Ph cards — easy cashless gifting</div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#128241;</div>
+        <div class="feature__label">Mobile Responsive</div>
+        <div class="feature__desc">Fully responsive — looks great on every screen size</div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#9999;&#65039;</div>
+        <div class="feature__label">Easy to Customize</div>
+        <div class="feature__desc">Change names, dates, colors, and photos in minutes</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Wedding Templates &mdash; Client Showcase &mdash; 2026</p>
+  </footer>
+
+  <script>
+    // Scroll-reveal with staggered delay per group
+    (function () {
+      function addReveal(selector, delayStep) {
+        document.querySelectorAll(selector).forEach(function (el, i) {
+          el.classList.add('reveal');
+          el.style.transitionDelay = (i * delayStep) + 's';
+        });
+      }
+
+      addReveal('.card',    0.12);
+      addReveal('.feature', 0.08);
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+
+</html>

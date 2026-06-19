@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clara &amp; Ethan — June 14, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="siteNav">
+    <button class="nav__burger" id="navBurger" aria-label="Menu">&#9776;</button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#story" class="nav__link">Story</a></li>
+      <li><a href="#details" class="nav__link">Details</a></li>
+      <li><a href="#rsvp" class="nav__link">RSVP</a></li>
+      <li><a href="#registry" class="nav__link">Registry</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__wreath">&#10070; &#10070; &#10070;</div>
+      <p class="hero__pre">We're getting married</p>
+      <h1 class="hero__names">Clara <span class="hero__amp">&amp;</span> Ethan</h1>
+      <div class="hero__divider"></div>
+      <p class="hero__date">June 14, 2026</p>
+      <p class="hero__venue">Sunflower Barn &mdash; Sonoma, California</p>
+      <a href="#story" class="hero__scroll">Explore &#8595;</a>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <div class="countdown-section__inner">
+      <p class="countdown-section__label">&#127807; Days until forever &#127807;</p>
+      <div class="countdown" data-wedding-date="2026-06-14">
+        <div class="countdown__unit">
+          <span class="countdown__number" data-days>00</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <span class="countdown__dot">&#183;</span>
+        <div class="countdown__unit">
+          <span class="countdown__number" data-hours>00</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <span class="countdown__dot">&#183;</span>
+        <div class="countdown__unit">
+          <span class="countdown__number" data-minutes>00</span>
+          <span class="countdown__label">Min</span>
+        </div>
+        <span class="countdown__dot">&#183;</span>
+        <div class="countdown__unit">
+          <span class="countdown__number" data-seconds>00</span>
+          <span class="countdown__label">Sec</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story section" id="story">
+    <div class="container">
+      <h2 class="section__title"><em>Our Story</em></h2>
+      <div class="story__list">
+        <div class="story__entry">
+          <div class="story__leaf">&#127809;</div>
+          <div class="story__body">
+            <h3>The Beginning <span class="story__year">2021</span></h3>
+            <p>A hiking trail in Big Sur brought two strangers to the same scenic overlook. Clara was taking photos of wildflowers; Ethan handed her a water bottle she'd dropped without even stopping. She ran after him to say thanks. They hiked the next six miles together.</p>
+          </div>
+        </div>
+        <div class="story__entry">
+          <div class="story__leaf">&#127809;</div>
+          <div class="story__body">
+            <h3>Growing Roots <span class="story__year">2023</span></h3>
+            <p>They planted a small garden together in their backyard in Sonoma — tomatoes, sunflowers, and rosemary. That garden became their Sunday morning ritual and the symbol they keep coming back to.</p>
+          </div>
+        </div>
+        <div class="story__entry">
+          <div class="story__leaf">&#127809;</div>
+          <div class="story__body">
+            <h3>The Proposal <span class="story__year">2025</span></h3>
+            <p>On the last day of summer, Ethan set up a picnic in the middle of their sunflower garden. He got down on one knee between the rows. Clara said yes so fast the sunflowers barely had time to sway.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section class="details section" id="details">
+    <div class="container">
+      <h2 class="section__title"><em>The Details</em></h2>
+      <div class="details__cards">
+        <div class="details__card">
+          <div class="details__icon">&#127768;</div>
+          <h3>Ceremony</h3>
+          <p>Sunday, June 14, 2026</p>
+          <p>4:00 PM</p>
+          <p>Sunflower Barn</p>
+          <p>88 Meadow Lane, Sonoma, CA</p>
+          <div class="details__badge">Garden Attire</div>
+        </div>
+        <div class="details__card">
+          <div class="details__icon">&#127859;</div>
+          <h3>Reception</h3>
+          <p>Sunday, June 14, 2026</p>
+          <p>6:00 PM &ndash; 11:00 PM</p>
+          <p>The Barn at Sunflower Estate</p>
+          <p>88 Meadow Lane, Sonoma, CA</p>
+          <div class="details__badge">Farm-to-Table Dinner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp section" id="rsvp">
+    <div class="container container--narrow">
+      <h2 class="section__title"><em>RSVP</em></h2>
+      <p class="rsvp__note">Please let us know by May 1, 2026</p>
+      <form class="rsvp__form" id="rsvpForm" novalidate>
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Full name" required />
+        </div>
+        <div class="form-row">
+          <label for="guests">Party Size</label>
+          <select id="guests" name="guests">
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="dietary">Dietary Requirements</label>
+          <input type="text" id="dietary" name="dietary" placeholder="Any allergies or restrictions?" />
+        </div>
+        <div class="form-row form-row--radio">
+          <span class="form-legend">Will you be joining us?</span>
+          <label class="radio-opt"><input type="radio" name="attending" value="yes" checked /> &#127807; Yes, can't wait!</label>
+          <label class="radio-opt"><input type="radio" name="attending" value="no" /> Sadly can't make it</label>
+        </div>
+        <button type="submit" class="btn">Send RSVP</button>
+      </form>
+      <div class="rsvp__confirm" id="rsvpConfirm" hidden>
+        <p>&#127807; We received your RSVP &mdash; so happy you'll be there! &#127807;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="registry section" id="registry">
+    <div class="container">
+      <h2 class="section__title"><em>Registry</em></h2>
+      <p class="registry__note">Your love and presence is all we need. But if you'd like to give a little something:</p>
+      <div class="registry__grid">
+        <a href="#" class="registry__card">
+          <div class="registry__icon">&#128154;</div>
+          <div class="registry__name">GCash</div>
+          <div class="registry__link">Send via GCash</div>
+        </a>
+        <a href="#" class="registry__card">
+          <div class="registry__icon">&#128153;</div>
+          <div class="registry__name">Maya</div>
+          <div class="registry__link">Send via Maya</div>
+        </a>
+        <a href="#" class="registry__card">
+          <div class="registry__icon">&#128242;</div>
+          <div class="registry__name">QR Ph</div>
+          <div class="registry__link">Scan QR Code</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__wreath">&#127807; &#127807; &#127807;</div>
+    <p class="footer__names">Clara &amp; Ethan</p>
+    <p class="footer__date">June 14, 2026 &mdash; Sonoma, CA</p>
+  </footer>
+
+  <script src="../shared/countdown.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sophie &amp; James — October 18, 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <ul>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#registry">Registry</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="hero__pre">Together with their families</p>
+      <h1 class="hero__names">Sophie &amp; James</h1>
+      <p class="hero__date">October 18, 2025</p>
+      <p class="hero__location">The Grand Pavilion &mdash; Charleston, SC</p>
+      <a href="#story" class="hero__scroll">&#8595; Scroll</a>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <p class="countdown-section__label">Counting down to forever</p>
+    <div class="countdown" data-wedding-date="2025-10-18">
+      <div class="countdown__unit">
+        <span class="countdown__number" data-days>00</span>
+        <span class="countdown__label">Days</span>
+      </div>
+      <span class="countdown__sep">&middot;</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" data-hours>00</span>
+        <span class="countdown__label">Hours</span>
+      </div>
+      <span class="countdown__sep">&middot;</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" data-minutes>00</span>
+        <span class="countdown__label">Minutes</span>
+      </div>
+      <span class="countdown__sep">&middot;</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" data-seconds>00</span>
+        <span class="countdown__label">Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story section" id="story">
+    <div class="container">
+      <h2 class="section__title">Our Story</h2>
+      <div class="story__timeline">
+        <div class="story__item">
+          <div class="story__year">2019</div>
+          <div class="story__content">
+            <h3>How We Met</h3>
+            <p>A chance encounter at a gallery opening in downtown Charleston. James knocked over Sophie's champagne — and spent the rest of the evening making it up to her.</p>
+          </div>
+        </div>
+        <div class="story__item story__item--right">
+          <div class="story__year">2021</div>
+          <div class="story__content">
+            <h3>Our First Trip</h3>
+            <p>Two weeks along the Amalfi Coast confirmed what we both already knew — that we wanted every adventure to be together from then on.</p>
+          </div>
+        </div>
+        <div class="story__item">
+          <div class="story__year">2024</div>
+          <div class="story__content">
+            <h3>The Proposal</h3>
+            <p>Under the stars at Folly Beach, with a ring that had been in James's family for three generations, he asked. She said yes before he finished the question.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section class="details section" id="details">
+    <div class="container">
+      <h2 class="section__title">Event Details</h2>
+      <div class="details__cards">
+        <div class="details__card">
+          <div class="details__icon">&#9788;</div>
+          <h3>Ceremony</h3>
+          <p>Saturday, October 18, 2025</p>
+          <p>4:00 PM</p>
+          <p>The Grand Pavilion</p>
+          <p>12 Harbor View Dr, Charleston, SC</p>
+          <p class="details__dress">Dress Code: Black Tie</p>
+        </div>
+        <div class="details__card">
+          <div class="details__icon">&#9835;</div>
+          <h3>Reception</h3>
+          <p>Saturday, October 18, 2025</p>
+          <p>6:00 PM &ndash; Midnight</p>
+          <p>The Grand Pavilion Ballroom</p>
+          <p>12 Harbor View Dr, Charleston, SC</p>
+          <p class="details__dress">Dinner &amp; Dancing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp section" id="rsvp">
+    <div class="container container--narrow">
+      <h2 class="section__title">RSVP</h2>
+      <p class="rsvp__sub">Kindly respond by September 1, 2025</p>
+      <form class="rsvp__form" id="rsvpForm" novalidate>
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-row">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" name="guests">
+            <option value="1">1 — Just me</option>
+            <option value="2">2 — Me &amp; my plus one</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="dietary">Dietary Needs</label>
+          <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, gluten-free, etc." />
+        </div>
+        <div class="form-row form-row--radio">
+          <span class="form-row__legend">Will you attend?</span>
+          <label class="radio-label"><input type="radio" name="attending" value="yes" checked /> Joyfully accepts</label>
+          <label class="radio-label"><input type="radio" name="attending" value="no" /> Regretfully declines</label>
+        </div>
+        <button type="submit" class="btn">Send RSVP</button>
+      </form>
+      <div class="rsvp__confirm" id="rsvpConfirm" hidden>
+        <p>Thank you! We can&#39;t wait to celebrate with you. &#10084;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="registry section" id="registry">
+    <div class="container">
+      <h2 class="section__title">Registry</h2>
+      <p class="registry__sub">Your presence is the greatest gift. Should you wish to send a little something, we gladly accept:</p>
+      <div class="registry__cards">
+        <a href="#" class="registry__card">
+          <div class="registry__name">GCash</div>
+          <div class="registry__cta">Send via GCash &rarr;</div>
+        </a>
+        <a href="#" class="registry__card">
+          <div class="registry__name">Maya</div>
+          <div class="registry__cta">Send via Maya &rarr;</div>
+        </a>
+        <a href="#" class="registry__card">
+          <div class="registry__name">QR Ph</div>
+          <div class="registry__cta">Scan QR Code &rarr;</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Sophie &amp; James &mdash; October 18, 2025</p>
+    <p class="footer__sub">Made with love</p>
+  </footer>
+
+  <script src="../shared/countdown.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

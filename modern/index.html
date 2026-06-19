@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mia &amp; Daniel — March 22, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__logo">M &amp; D</div>
+    <ul class="nav__links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#registry">Registry</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__left">
+      <p class="hero__eyebrow">March 22, 2026</p>
+      <h1 class="hero__names">Mia<br />&amp;<br />Daniel</h1>
+      <p class="hero__venue">Rooftop at The Standard &mdash; New York, NY</p>
+      <a href="#story" class="hero__cta">Our Story</a>
+    </div>
+    <div class="hero__right">
+      <img
+        src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=900&q=80"
+        alt="Couple portrait"
+        class="hero__img"
+      />
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <div class="countdown" data-wedding-date="2026-03-22">
+      <div class="countdown__unit"><span class="countdown__number" data-days>00</span><span class="countdown__label">Days</span></div>
+      <div class="countdown__divider"></div>
+      <div class="countdown__unit"><span class="countdown__number" data-hours>00</span><span class="countdown__label">Hours</span></div>
+      <div class="countdown__divider"></div>
+      <div class="countdown__unit"><span class="countdown__number" data-minutes>00</span><span class="countdown__label">Minutes</span></div>
+      <div class="countdown__divider"></div>
+      <div class="countdown__unit"><span class="countdown__number" data-seconds>00</span><span class="countdown__label">Seconds</span></div>
+    </div>
+    <p class="countdown-section__label">Until we say I do</p>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story section" id="story">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">01 &mdash; Story</span>
+        <h2 class="section__title">How It Happened</h2>
+      </div>
+      <div class="story__grid">
+        <div class="story__card">
+          <span class="story__year">2020</span>
+          <h3>The Intro</h3>
+          <p>A mutual friend's birthday party in SoHo. Mia was talking about architecture; Daniel was the only one actually listening. They talked until the place closed.</p>
+        </div>
+        <div class="story__card">
+          <span class="story__year">2022</span>
+          <h3>Moving In</h3>
+          <p>After two years of subway rides between apartments, they found a place in Brooklyn together. Three trips to IKEA sealed the deal.</p>
+        </div>
+        <div class="story__card">
+          <span class="story__year">2025</span>
+          <h3>The Proposal</h3>
+          <p>A rooftop dinner Daniel claimed was "just a random Tuesday." The ring was hidden in a book Mia had been meaning to read for two years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section class="details section" id="details">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">02 &mdash; Details</span>
+        <h2 class="section__title">The Day</h2>
+      </div>
+      <div class="details__row">
+        <div class="details__block">
+          <h3 class="details__type">Ceremony</h3>
+          <p>Sunday, March 22, 2026</p>
+          <p>3:30 PM</p>
+          <p>Rooftop at The Standard</p>
+          <p>848 Washington St, New York, NY</p>
+          <span class="details__tag">Smart Casual</span>
+        </div>
+        <div class="details__line"></div>
+        <div class="details__block">
+          <h3 class="details__type">Reception</h3>
+          <p>Sunday, March 22, 2026</p>
+          <p>5:30 PM &ndash; 11:00 PM</p>
+          <p>The Standard Ballroom</p>
+          <p>848 Washington St, New York, NY</p>
+          <span class="details__tag">Dinner &amp; Dancing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp section" id="rsvp">
+    <div class="container container--narrow">
+      <div class="section__header">
+        <span class="section__tag">03 &mdash; RSVP</span>
+        <h2 class="section__title">Will You Join Us?</h2>
+      </div>
+      <p class="rsvp__deadline">Kindly respond by February 1, 2026</p>
+      <form class="rsvp__form" id="rsvpForm" novalidate>
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-row">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" name="guests">
+            <option value="1">1 — Just me</option>
+            <option value="2">2 — Plus one</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="dietary">Dietary Needs</label>
+          <input type="text" id="dietary" name="dietary" placeholder="Any dietary restrictions?" />
+        </div>
+        <div class="form-row form-row--attend">
+          <label class="toggle-label">
+            <input type="checkbox" id="attending" name="attending" checked />
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-text">I'll be there!</span>
+          </label>
+        </div>
+        <button type="submit" class="btn">Confirm RSVP</button>
+      </form>
+      <div class="rsvp__confirm" id="rsvpConfirm" hidden>
+        <p>We got it &mdash; see you on March 22! &#129395;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="registry section" id="registry">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">04 &mdash; Registry</span>
+        <h2 class="section__title">The Wishlist</h2>
+      </div>
+      <p class="registry__note">No gift is expected — your presence is plenty. But if you'd like to send something, we accept:</p>
+      <div class="registry__list">
+        <a href="#" class="registry__item">
+          <span class="registry__store">GCash</span>
+          <span class="registry__arrow">&rarr;</span>
+        </a>
+        <a href="#" class="registry__item">
+          <span class="registry__store">Maya</span>
+          <span class="registry__arrow">&rarr;</span>
+        </a>
+        <a href="#" class="registry__item">
+          <span class="registry__store">QR Ph</span>
+          <span class="registry__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__couple">Mia &amp; Daniel</p>
+    <p class="footer__date">03.22.2026</p>
+  </footer>
+
+  <script src="../shared/countdown.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
